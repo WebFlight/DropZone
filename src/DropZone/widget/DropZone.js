@@ -91,7 +91,7 @@ define([
                 });
                 this.domNode.appendChild(this.uploadButton.domNode);
             }
-            this.domNode.appendChild(mxui.dom.div({
+            this.domNode.appendChild(mxui.dom.create("div", {
                 "id": this.id + "_zone",
                 "class": "dropzone",
                 "style": "height: " + this.panelheight + "px; width: " + this.panelwidth + "px;"
@@ -182,7 +182,7 @@ define([
                 });
             }
             if (!this.autoUpload) {
-				this.dropzone.processQueue(); 
+				this.dropzone.processQueue();
 			}
         },
         /**
